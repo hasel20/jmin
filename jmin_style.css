@@ -1,0 +1,134 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: "nanumgothic";}
+img {vertical-align: top;}
+.hide {position: absolute; left: 9999px; width: 0; height: 0; overflow: hidden;}
+.wrap {width: 1200px; margin: 0 auto; position: relative;}
+
+header {box-shadow: 0 0 10px #333; height: 70px; position: fixed; z-index: 99; width: 100%; background: #efe;} 
+/*z-index : 오버레이 순서, 인덱스 적용하면 폭(width) 입력 필수*/ 
+header .wrap {width: 1200px; margin: 0 auto; position: relative; padding: 18px; box-sizing: border-box; height: 70px;}
+header h1 img {height: 40px;}
+
+header .headmenu1 {position: absolute; right: 310px; top: 30px;}
+header .headmenu1:after {content: '';clear: both;display: block;}
+header .headmenu1 li {float: left; font-weight: bold; margin-right: 80px;
+font-size: 14px;}
+
+header .headmenu2 {position: absolute; right: 0px; top: 30px;}
+header .headmenu2:after {content: '';clear: both;display: block;}
+header .headmenu2 li:after {content: '|'; margin: 0 8px;}
+header .headmenu2 li:last-child:after {content: ""; margin: 0;}
+header .headmenu2 li {float: left; color: #666; font-size: 12px;}
+.emty {height: 70px;} /*빈공간은 div로 주었음 위치는 헤더,색션 사이*/
+
+#mainbar {background: #f3f2f0;}
+#mainbar article {position: absolute; left: 60px; top: 50px; color: #fff;}
+#mainbar article h3 {font-size: 28px;}
+#mainbar article p {font-size: 16px; line-height: 1.5; margin-top: 30px;}
+#mainbar article a {font-size: 16px; font-weight: bold; width: 190pxs; display: block; border: 1px solid #fff; text-align: center; line-height: 46px; margin-top: 46px; transition: 0.5s;}
+#mainbar article a:hover,
+#mainbar article a:active,
+#mainbar article a:focus {background: #fff; color: #000;}
+
+#mainbar .point {display: flex; justify-content: center; position: absolute; width: 100%; bottom: 30px;}
+#mainbar .point li {margin: 0 4px;}
+#mainbar .point li a {border-radius: 14px; background: #fff; width: 12px; height: 12px; text-indent: -30px; overflow: hidden; display: block;}
+#mainbar .point li:nth-child(1) a {background: #79f;}
+
+#mainbar .wrap > a {position: absolute; top:calc(50% - 12px);}
+#mainbar .prev {left: -27px;}
+#mainbar .next {right: -27px;}
+
+#mainbar .bottom {margin-top: 40px;}
+#mainbar .bottom ul:after {content: "";clear: both; display: block;}
+#mainbar .bottom ul li {float: left; width: 299px; margin-right: 1px;}
+#mainbar .bottom ul a {display: block; width: 299px; ; line-height: 100px; padding-left: 40px; font-size: 18px; font-weight: bold; box-sizing: border-box;}
+#mainbar .bottom ul li:nth-child(1) a {background: url(Terraria/icon1-1.png) no-repeat right 50px center #fff;}
+#mainbar .bottom ul li:nth-child(2) a {background: url(Terraria/icon1-2.png) no-repeat right 50px center #fff;}
+#mainbar .bottom ul li:nth-child(3) a {background: url(Terraria/icon1-3.png) no-repeat right 50px center #fff;}
+#mainbar .bottom ul li:nth-child(4) a {background: url(Terraria/icon1-4.png) no-repeat right 50px center #fff;}
+/*no-repeat 배경 반복 제거*/
+#mainbar .bottom ul li:last-child {margin-right: 0; 300px;}
+
+#boss {padding: 40px 0; background: #333;}
+#boss ul:after {content: '';clear: both;display: block;}
+#boss ul li {float: left; width: 400px; color: #fff;}
+#boss ul li p {background: #000; font-weight: bold; display: block; line-height: 50px; padding-left: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+/*줄넘어감 방지 입력*/
+#boss .wrap > a {position: absolute; top: calc(50% - 12px);}
+#boss .prev {left: -27px;}
+#boss .next {right: -27px;}
+
+#news {background: #7883a5; padding-top: 80px;}
+#news .wrap:after {content: '';clear: both;display: block;}
+#news article {float: left; margin: 50px 0 0 30px;}
+#news article h3 {font-size: 28px;}
+#news article p {line-height: 1.5; margin-top: 34px;}
+#news article a {margin-top: 38px; width: 172px; border: 1px solid #000; display: block; text-align: center; line-height: 42px; font-weight: bold; transition: 0.5s;}
+#news article a i {position: relative; top: 1px;}
+#news article a:active,
+#news article a:focus,
+#news article a:hover {background: #000; color: #fff;}
+#news figure {float: right; width: 800px;}
+#news figure img {width: 100%;}
+/*순서가 상관없을시 float right 해도 상관없음*/
+
+#news ul {display: flex; justify-content: center; width: 100%; position: absolute; bottom: 24px}
+#news ul li {margin: 0 5px;}
+#news ul li a{background: #999; width: 12px; height: 12px; border-radius: 12px; display: block; text-indent: -15px; overflow: hidden;}
+#news ul li .active {background: #384564;}
+#news .wrap > a {position: absolute; top:calc(50% - 12px);}
+#news .prev {left: -27px;}
+#news .next {right: -27px;}
+
+#world {background: #e9e5e4;} 
+#world h2 {line-height: 120px; font-size: 26px;}
+#world ul {}
+#world ul:after {content: '';clear: both;display: block;}
+#world ul li {float: left}
+#world ul li a {width: 300px; text-align: center; line-height: 300px; display: block; color: #fff; font-weight: bold; text-transform: uppercase;}
+#world ul li:nth-child(1) a {background: url(Terraria/4-1.png);}
+#world ul li:nth-child(2) a {background: url(Terraria/4-2.png);}
+#world ul li:nth-child(3) a {background: url(Terraria/4-3.png);}
+#world ul li:nth-child(4) a {background: url(Terraria/4-4.png); color: #e00;}
+
+#ply {background: #efe;}
+#ply {padding: 80px 0 45px 0; height: 360px; box-sizing: border-box;}
+#ply .amor {content: '';clear: both;display: block;}
+#ply .amor li {float: left; margin-right: 30px;}
+#ply .amor li:last-child {margin-right: 0px;}
+#ply .amor li p {font-weight: bold; margin-top: 24px;}
+
+#ply .wrap > a {background: #fff; position: absolute; top:78px; display: flex;justify-content: center; align-items: center; width: 45px; height: 44px;}
+#ply .wrap > a img {height: 16px;}
+#ply .prev {left: 0px;}
+#ply .next {right: 0px;}
+
+
+footer {background: #355537;}
+footer .wrap {color: #eee; font-size: 12px;}
+footer .list1 {padding-top: 50px;}
+footer .list1:after {content: '';clear: both;display: block;}
+footer .list1 li {float: left; font-weight: bold;}
+footer .list1 li:after {content: '|'; margin: 0 16px; font-size: 12px; position: relative; top: -1px;}
+footer .list1 li:last-child:after {content: '';margin: 0;}
+footer .list1 li a span {font-size: 8px; margin-left: 5px; color: #999;}
+
+
+footer address {margin-top: 20px; display: block; line-height: 1.8; margin-bottom: 44px;}
+footer address span {margin-right: 40px; font-style:  normal;}
+footer address span:last-child {display: block;}
+
+footer .icon {position: absolute; right: 0; top: 100px;}
+footer .icon:after {content: '';clear: both;display: block;}
+footer .icon li {float: left; margin-left: 22px;}
+footer .icon li:last-child {margin-right: 20px;}
+footer .icon li a img {height: 20px;}
+
+footer .bottom {background: #151f15;}
+footer .bottom .wrap {display: flex; justify-content: space-between; align-items: center; height: 60px; }
+footer .bottom img {height: 40px;}
+footer .bottom p {line-height: 60px;}
